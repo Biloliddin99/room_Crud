@@ -16,4 +16,8 @@ interface StudentDao {
 
     @Delete
     fun delete(student: Student)
+
+    @Query("SELECT * FROM student WHERE name LIKE '%' || :searchQuery || '%' OR grade LIKE '%' || :searchQuery")
+    fun searchStudent(searchQuery: String):List<Student>
+
 }

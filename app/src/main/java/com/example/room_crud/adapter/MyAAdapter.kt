@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.room_crud.databinding.ItemRvBinding
 import com.example.room_crud.models.Student
 
-class MyAAdapter(var list: List<Student>) : RecyclerView.Adapter<MyAAdapter.Vh>() {
+class MyAAdapter(var list: ArrayList<Student>) : RecyclerView.Adapter<MyAAdapter.Vh>() {
 
     inner class Vh(var itemRvBinding: ItemRvBinding) : RecyclerView.ViewHolder(itemRvBinding.root) {
         fun onBind(student: Student) {
